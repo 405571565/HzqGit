@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>FFMSG_JAVA</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- <servlet> <description>JAX-RS Tools Generated - Do not modify</description> 
+		<servlet-name>JAX-RS Servlet</servlet-name> <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class> 
+		<load-on-startup>1</load-on-startup> </servlet> <servlet-mapping> <servlet-name>JAX-RS 
+		Servlet</servlet-name> <url-pattern>/jaxrs/*</url-pattern> </servlet-mapping> -->
+
+
+<!-- <filter>
+		<filter-name>MsgFilter</filter-name>
+		<filter-class>com.ffmsg.filter.MsgFilter</filter-class>
+		
+	</filter>
+	<filter-mapping>
+		<filter-name>MsgFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>    -->
+
+	<!-- 获取验证码和发送短信 -->
+	<servlet>
+		<servlet-name>GetCaptcha</servlet-name>
+		<servlet-class>com.ffmsg.main.GetCaptcha</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetCaptcha</servlet-name>
+		<url-pattern>/GetCaptcha</url-pattern>
+	</servlet-mapping>
+
+	<!-- 登录 -->
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.ffmsg.main.Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+
+	<!-- 添加超级管理员 -->
+	<servlet>
+		<servlet-name>AddRoot</servlet-name>
+		<servlet-class>com.ffmsg.root.AddRoot</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddRoot</servlet-name>
+		<url-pattern>/AddRoot</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 更新balance 系统短信余量 -->
+	<servlet>
+		<servlet-name>UpBalance</servlet-name>
+		<servlet-class>com.ffmsg.root.UpBalance</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpBalance</servlet-name>
+		<url-pattern>/UpBalance</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 更改管理员密码 -->
+	<servlet>
+		<servlet-name>UpPwd</servlet-name>
+		<servlet-class>com.ffmsg.root.UpPwd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpPwd</servlet-name>
+		<url-pattern>/UpPwd</url-pattern>
+	</servlet-mapping>
+
+	<!-- 查询发送记录表 -->
+	<servlet>
+		<servlet-name>SearchSend</servlet-name>
+		<servlet-class>com.ffmsg.search.SearchSend</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchSend</servlet-name>
+		<url-pattern>/SearchSend</url-pattern>
+	</servlet-mapping>
+
+	<!-- 查询app用户表 -->
+	<servlet>
+		<servlet-name>SearchUser</servlet-name>
+		<servlet-class>com.ffmsg.search.SearchUser</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchUser</servlet-name>
+		<url-pattern>/SearchUser</url-pattern>
+	</servlet-mapping>
+
+	<!-- 查询app余额 -->
+	<servlet>
+		<servlet-name>FindBlance</servlet-name>
+		<servlet-class>com.ffmsg.search.FindBlance</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindBlance</servlet-name>
+		<url-pattern>/FindBlance</url-pattern>
+	</servlet-mapping>
+
+	<!-- 查询充值记录 -->
+	<servlet>
+		<servlet-name>Search_Operater</servlet-name>
+		<servlet-class>com.ffmsg.search.Search_Operater</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Search_Operater</servlet-name>
+		<url-pattern>/Search_Operater</url-pattern>
+	</servlet-mapping>
+	<!-- 退出 -->
+	<servlet>
+		<servlet-name>LeaveLogin</servlet-name>
+		<servlet-class>com.ffmsg.search.LeaveLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LeaveLogin</servlet-name>
+		<url-pattern>/LeaveLogin</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>AlipayBack</servlet-name>
+		<servlet-class>com.ffmsg.alipay.AlipayBack</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AlipayBack</servlet-name>
+		<url-pattern>/AlipayBack</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>AliPayCreateOrder</servlet-name>
+		<servlet-class>com.ffmsg.alipay.AliPayCreateOrder</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AliPayCreateOrder</servlet-name>
+		<url-pattern>/AliPayCreateOrder</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>SearchSmgStatus</servlet-name>
+		<servlet-class>com.ffmsg.search.SearchSmgStatus</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchSmgStatus</servlet-name>
+		<url-pattern>/SearchSmgStatus</url-pattern>
+	</servlet-mapping>
+	
+
+
+
+
+
+
+</web-app>

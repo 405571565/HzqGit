@@ -1,0 +1,329 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,form,img,ul,ol,li,dl,dt,dd{margin:0px; padding:0px;}
+body{margin:0 auto;padding:0;border:0; font-family:simsun;background: #eeeff1;font-size: #333;}
+select,input,textarea{vertical-align:middle; padding:0; margin:0;}
+textarea{resize:none;}
+img{border:0;}
+ol,ul,li{list-style:none;}
+a{text-decoration:none; transition: ease-in-out .3s;}
+a,img,input,textarea,select,button,area{outline:none;}
+
+*{-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;}
+
+/*清除浮动*/
+.clearfix:after{content:'';display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1; _zoom:1;}
+/*IE下a:hover 背景闪烁*/
+*html{overflow:-moz-scrollbars-vertical; _zoom:expression(function(ele){ele.style.zoom = "1"; document.execCommand("BackgroundImageCache",false,true)}(this))}
+
+.lfloat{float:left;}
+.rfloat{float:right;}
+
+.header{
+	height: 76px;
+	background: #fff;
+	padding: 0 20px;
+}
+
+.header .lfloat img{
+	display: block;
+}
+.header .rfloat ul li{
+	display: inline-block;
+	padding-left: 50px;
+	line-height: 76px;
+	cursor: pointer;
+}
+.header .rfloat ul li:hover{
+	opacity: .7;
+}
+.header .rfloat ul li i{
+	font-style: normal;
+}
+.header .rfloat ul li a{
+	color: #333;
+}
+.sideNav{
+	width: 270px;
+	position: fixed;
+	left: 0;
+	top: 76px;
+	bottom: 0;
+	background: linear-gradient(to bottom, #368fe9, #3667c9);
+}
+.sideNav ul li{
+	height: 60px;
+	position: relative;
+}
+.sideNav ul li:before{
+	content: '';
+	background: #1ecda4;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 6px;
+	display: none;
+}
+.sideNav ul li:hover,.sideNav ul li.on{
+	background: #2c52d1;
+}
+.sideNav ul li:hover:before,.sideNav ul li.on:before{
+	display: block;
+}
+.sideNav ul li a{
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	padding-left: 122px;
+	color: #fff;
+}
+.sideNav ul li.index a{
+	background: url(../images/icon_index.png) no-repeat 85px 22px;
+}
+.sideNav ul li.account a{
+	background: url(../images/icon_account.png) no-repeat 85px 22px;
+}
+.sideNav ul li.send a{
+	background: url(../images/icon_send.png) no-repeat 85px 22px;
+}
+.sideNav ul li.pay a{
+	background: url(../images/icon_pay.png) no-repeat 85px 22px;
+}
+.main{
+	position: fixed;
+	left: 290px;
+	top: 96px;
+	bottom: 20px;
+	right: 20px;
+	background: #fff;
+}
+.mainH{
+	height: 60px;
+	line-height: 60px;
+	padding-left: 20px;
+	border-bottom: 1px solid #ddd;
+}
+.mainM{
+	padding: 20px;
+}
+.search{
+	margin-bottom: 20px;
+}
+.search ul li{
+	display: block;
+	margin-left: 12px;
+	height: 42px;
+	line-height: 42px;
+	float: left;
+}
+.search ul li span{
+	display: block;
+	padding-left: 20px;
+}
+.search ul li:first-child{
+	margin-left: 0;
+}
+.search ul li input,.search ul li select{
+	display: block;
+	height: 42px;
+	width: 200px;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	padding: 10px 10px;
+}
+.search ul li select{
+	width: 140px;
+}
+.search ul li button{
+	background: url(../images/icon_search.png) no-repeat center #368fe9;
+	border-radius: 4px;
+	border: none;
+	height: 42px;
+	width: 60px;
+	display: block;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+}
+.search ul li button:hover{
+	opacity: .7;
+}
+
+.tabCon table{
+	width: 100%;
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+}
+.tabCon table tr:nth-child(odd){
+	background: #f7f7f7;
+}
+.tabCon table tr:first-child{
+	background: #ebebeb;
+}
+.tabCon table th,.tabCon table td{
+	height: 42px;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+	font-size: 12px;
+}
+.tabCon table td span{
+	display: inline-block;
+	background: #07cb51;
+	font-size: 14px;
+	border-radius:4px;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	padding: 0 20px;
+	color: #fff;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+}
+.tabCon table td span:hover{
+	opacity: .7;
+}
+.tabCon table td em{
+	display: inline-block;
+	font-size: 12px;
+	border-radius:10px;
+	text-align: center;
+	line-height: 24px;
+	height: 24px;
+	padding: 0 20px;
+	color: #fff;
+	font-style: normal;
+}
+.tabCon table td u{
+	display: inline-block;
+	width: 220px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-decoration: none;
+}
+.tabCon table td em.success{
+	background: #00a3ff;
+}
+.tabCon table td em.fail{
+	background: #ff0000;
+}
+.popupCon{
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	background: rgba(0,0,0,.3);
+	display: none;
+}
+.popup{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	border-radius: 15px;
+	overflow: hidden;
+	background: #fff;
+}
+.btnCon{
+	padding: 20px 0;
+	text-align: center;
+}
+.btnCon a{
+	width: 80px;
+	height: 40px;
+	border-radius: 4px;
+	background: #368fe9;
+	line-height: 40px;
+	text-align: center;
+	display: inline-block;
+	color: #fff;
+}
+.btnCon a.return{
+	border:1px solid #ddd;
+	background: #fff;
+	margin-left: 20px;
+	color: #333;
+}
+.popupH{
+	font-size: 20px;
+	height: 60px;
+	line-height: 60px;
+	background: #368fe9;
+	color: #fff;
+	text-align: center;
+}
+.popupM table{
+	width: 100%;
+	padding-top: 5px;
+}
+
+.popupM table th,.popupM table td{
+	height: 60px;
+	vertical-align: top;
+	line-height: 42px;
+	padding: 5px 0;
+}
+.popupM table th{
+	width: 30%;
+	text-align: right;
+	padding-right: 20px;
+}
+.popupM table input[type=text],.popupM table textarea{
+	border-radius: 4px;
+	padding-left: 10px;
+	line-height: 42px;
+	width: 350px;
+	border: 1px solid #ddd;
+	margin-right: 10px;
+}
+.eui-page{
+	text-align: center;
+	padding: 30px 0;
+}
+.eui-page .pageInput{
+	display: inline-block;
+}
+line-height: 32px;
+.eui-page .pageInput{
+	display: inline-block;
+}
+.eui-page .pageInput input[type=text]{
+	width: 50px;
+	margin: 0 16px 0 5px;
+	height: 32px;
+}
+.eui-page .pageInput input[type=button]{
+	width: 40px;
+	height: 32px;
+}
+.pagination{
+	display: inline-block !important;
+}
+.pagination a {
+    text-decoration: none;
+	border: 1px solid #AAE;
+	border-radius:15px;
+	color: #15B;
+}
+.pagination a, .pagination span {
+    padding: 4px;
+	margin: 0 8px;
+}
+
+.pagination .current {
+    background: #26B;
+    color: #fff;
+	border: 1px solid #AAE;
+	border-radius:15px;
+}
+
+.pagination .current.prev, .pagination .current.next{
+	color:#999;
+	border-color:#999;
+	background:#fff;
+}
